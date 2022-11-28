@@ -19,7 +19,7 @@ public class SoapClientController {
     private SoapClient soapClient;
 
     @GetMapping("/")
-    //   @Scheduled(fixedRate = 3600000)
+    //   @Scheduled(fixedRate = 1800000)
     public ListOfCountryNamesByNameResponse getListCapital() {
         System.out.println(new Date());
         return soapClient.getContry();
