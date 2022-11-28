@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-
 @EnableScheduling
 @RestController
 @RequestMapping("/country")
@@ -20,8 +18,7 @@ public class SoapClientController {
 
     @GetMapping("/")
     @Scheduled(fixedRate = 1800000)
-    public ListOfCountryNamesByNameResponse getListCapital() {
-        System.out.println(new Date());
+    public ListOfCountryNamesByNameResponse getListCountry() {
         return soapClient.getContry();
     }
 
